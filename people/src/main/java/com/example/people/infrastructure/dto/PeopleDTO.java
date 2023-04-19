@@ -13,14 +13,12 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 public class PeopleDTO {
+
   @Id
-  @GeneratedValue(strategy= GenerationType.TABLE)
+  @GeneratedValue(strategy = GenerationType.TABLE)
   private Integer id;
   private String name;
   private String age;
-
-
-
 
 
 }

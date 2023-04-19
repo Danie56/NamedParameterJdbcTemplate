@@ -11,12 +11,10 @@ public class PeopleUpdate {
 
   private final PeopleUpdateService peopleUpdateService;
 
-  public void updatePeople(People people){
-
+  public void updatePeople(People people) {
 
     peopleUpdateService.peopleUpdate(people);
   }
-
 
 
 }

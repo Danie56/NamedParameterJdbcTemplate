@@ -1,6 +1,5 @@
 package com.example.people.infrastructure.api.controller;
 
-import com.example.people.PeopleApplication;
 import com.example.people.application.PeopleDelete;
 import com.example.people.application.PeopleGet;
 import com.example.people.application.PeopleSave;
@@ -22,9 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping(path="/people")
+@RequestMapping(path = "/people")
 @CrossOrigin(origins = "http://localhost:4200/")
 public class PeopleController {
+
   private PeopleSave peopleSave;
   private PeopleGet peopleGet;
 
@@ -33,41 +33,37 @@ public class PeopleController {
 
   @PostMapping("/save")
 
-  public ResponseEntity<People> savePeople(@RequestBody People people){
+  public ResponseEntity<People> savePeople(@RequestBody People people) {
 
     return new ResponseEntity<>(peopleSave.peopleSave(people), HttpStatus.CREATED);
   }
+
   @GetMapping("/get/{id}")
 
-  public  ResponseEntity<People> getPeople(@PathVariable Integer id){
+  public ResponseEntity<People> getPeople(@PathVariable Integer id) {
 
-    return  new ResponseEntity<>(peopleGet.getPeople(id),HttpStatus.OK);
+    return new ResponseEntity<>(peopleGet.getPeople(id), HttpStatus.OK);
   }
+
   @PutMapping("/update")
 
-  public  void updatePeople(@RequestBody People people){
+  public void updatePeople(@RequestBody People people) {
 
     peopleUpdate.updatePeople(people);
   }
-  @GetMapping("/getAll")
-  public ResponseEntity<List<People>> PeopleGetAll(){
 
-    return new ResponseEntity<>(peopleGet.getPeopleAll(),HttpStatus.OK);
+  @GetMapping("/getAll")
+  public ResponseEntity<List<People>> PeopleGetAll() {
+
+    return new ResponseEntity<>(peopleGet.getPeopleAll(), HttpStatus.OK);
   }
+
   @DeleteMapping("/delete/{id}")
-  public void deletePeople(@PathVariable Integer id){
+  public void deletePeople(@PathVariable Integer id) {
     peopleDelete.peopleDelete(id);
 
 
   }
-
-
-
-
-
-
-
-
 
 
 }

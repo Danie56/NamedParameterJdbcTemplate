@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 public class PeopleDelete {
 
   private final PeopleDeleteService peopleDeleteService;
-  public void peopleDelete (Integer id){
-    peopleDeleteService.deletePeople(id);
 
+  public void peopleDelete(Integer id) {
+    peopleDeleteService.deletePeople(id);
 
 
   }

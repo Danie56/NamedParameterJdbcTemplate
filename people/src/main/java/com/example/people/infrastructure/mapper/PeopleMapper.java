@@ -10,6 +10,7 @@ import org.mapstruct.MappingConstants.ComponentModel;
 public interface PeopleMapper {
 
   People toPeopleEntity(PeopleDTO peopleDTO);
+
   PeopleDTO toPeopleDto(People people);
 
 }

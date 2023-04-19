@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 
 public class PeopleSaveAdapter implements PeopleSaveService {
+
   private final PeopleRepository peopleRepository;
   private final PeopleDAO peopleDAO;
   private final PeopleMapper peopleMapper;

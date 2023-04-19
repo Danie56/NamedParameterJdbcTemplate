@@ -4,7 +4,9 @@ import com.example.people.domain.entites.People;
 import java.util.List;
 
 public interface PeopleGetService {
-  People getPeople (Integer id);
-  List<People> getPeopleAll ();
+
+  People getPeople(Integer id);
+
+  List<People> getPeopleAll();
 
 }

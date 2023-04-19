@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 @Service
 @AllArgsConstructor
 public class PeopleSave {
+
   private final PeopleSaveService peopleSaveService;
 
-  public People peopleSave(People people){
+  public People peopleSave(People people) {
     return peopleSaveService.savePeople(people);
   }
 
